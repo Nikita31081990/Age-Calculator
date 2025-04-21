@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .outerbox {
+        width: 500px;
+        height: 300px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outerbox">
+      <h1>Age Calculator</h1>
+      <p>Select Date of birthday</p>
+      <input type="date" name="" id="input" />
+      <button id="btn">Calculate Age</button>
+      <p id="para"></p>
+    </div>
+
+    <script>
+      const input = document.querySelector("#input");
+      const button = document.querySelector("#btn");
+      const paragraph = document.querySelector("#para");
+
+      button.addEventListener("click", () => {
+        const inputValue = input.value;
+        if (inputValue == "") {
+          alert("enter the date of birth");
+        } else {
+          const today = new Date();
+          const dob = new Date(inputValue);
+          console.log(today);
+          console.log(dob);
+          paragraph.innerHTML =
+            "your age is " + (today.getFullYear() - dob.getFullYear());
+        }
+      });
+    </script>
+  </body>
+</html>
