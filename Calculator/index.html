@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Calculator App</title>
+    <script src="./script.js" type="text/javascript" defer></script>
+  </head>
+  <body onload="clickOnFocus1()">
+    <div class="outerbox">
+      <h2>Calculator App</h2>
+      <div class="innerbox">
+        <div class="left">
+          <img src="./calculator.png" alt="" />
+        </div>
+        <div class="left">
+          <form onsubmit="return false;">
+            <!-- Prevent form submission -->
+            <table>
+              <tr>
+                <td><label for="num1">Enter first number</label></td>
+                <td><input type="text" id="num1" autocomplete="off" /></td>
+              </tr>
+              <tr>
+                <td><label for="num2">Enter second number</label></td>
+                <td><input type="text" id="num2" autocomplete="off" /></td>
+              </tr>
+              <tr>
+                <td><label for="select">Operation</label></td>
+                <td>
+                  <select name="" id="select" style="width: 165px">
+                    <option value="">Select</option>
+                    <option value="+">Addition</option>
+                    <option value="-">Subtraction</option>
+                    <option value="*">Multiplication</option>
+                    <option value="/">Division</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="result">Result</label></td>
+                <td><input type="text" id="result" value="0" readonly /></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <button type="button" onclick="calculate()">Do Task</button>
+                  <button type="button" onclick="clearAll()">Clear</button>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
